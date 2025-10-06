@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const env: ImportMetaEnv = import.meta.env;
 
@@ -8,7 +8,8 @@ const EnvInfo: React.FC = () => {
       <h3 className="text-lg font-semibold mb-2">환경변수 정보</h3>
       <div className="space-y-2">
         <div>
-          <span className="font-medium">API Base URL:</span> {env.VITE_API_BASE_URL}
+          <span className="font-medium">API Base URL:</span>{' '}
+          {env.VITE_API_BASE_URL}
         </div>
         <div>
           <span className="font-medium">App Name:</span> {env.VITE_APP_NAME}
@@ -23,11 +24,12 @@ const EnvInfo: React.FC = () => {
           <span className="font-medium">Build Time:</span> {env.__BUILD_TIME__}
         </div>
         <div>
-          <span className="font-medium">App Version:</span> {env.__APP_VERSION__}
+          <span className="font-medium">App Version:</span>{' '}
+          {env.__APP_VERSION__}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EnvInfo
+export default EnvInfo;
