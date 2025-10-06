@@ -19,5 +19,19 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      // 사용하지 않는 변수 및 import 오류 처리
+      'no-unused-vars': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+        },
+      ],
+      // 사용하지 않는 import 오류 처리
+      '@typescript-eslint/no-unused-imports': 'error',
+    },
   },
 ])
